@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu te amo em todos os idiomas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 3em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="loveMessage">Eu te amo</h1>
+
+    <script>
+        const messages = [
+            "Eu te amo", // Português
+            "I love you", // Inglês
+            "Je t'aime", // Francês
+            "Te quiero", // Espanhol
+            "Ich liebe dich", // Alemão
+            "Ti amo", // Italiano
+            "Я тебя люблю", // Russo
+            "我爱你", // Chinês
+            "愛してる", // Japonês
+            "사랑해", // Coreano
+            "Te iubesc", // Romeno
+            "Jeg elsker dig", // Dinamarquês
+            "Jeg elsker deg", // Norueguês
+            "Ég elska þig", // Islandês
+            "Aloha wau ia 'oe" // Havaiano
+        ];
+
+        let currentIndex = 0;
+
+        function changeMessage() {
+            currentIndex = (currentIndex + 1) % messages.length;
+            document.getElementById('loveMessage').innerText = messages[currentIndex];
+        }
+
+        setInterval(changeMessage, 2000); // Altera a cada 2 segundos
+    </script>
+</body>
+</html>
